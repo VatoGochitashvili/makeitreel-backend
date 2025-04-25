@@ -6,6 +6,12 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const gTTS = require('gtts');
+const tempFolder = '/tmp'; // Render allows using /tmp for temp storage
+
+const videoPath = `${tempFolder}/${id}.mp4`;
+const outputPath = `${tempFolder}/${id}_final.mp4`;
+const audioPath = `${tempFolder}/${id}.mp3`;
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
